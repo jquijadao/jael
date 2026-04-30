@@ -3,171 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de Diseño Web - Índice Maestro</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
-            max-width: 920px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 56px 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .header p {
-            font-size: 1.05rem;
-            opacity: 0.92;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 12px;
-            padding: 30px;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(102, 126, 234, 0.2);
-        }
-
-        .project-card h2 {
-            color: #4c63d8;
-            margin-bottom: 14px;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            color: #56616f;
-            margin-bottom: 18px;
-            line-height: 1.65;
-        }
-
-        .project-card ul {
-            margin-left: 20px;
-            color: #56616f;
-        }
-
-        .project-card li {
-            margin: 8px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 12px 24px;
-            background: #667eea;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #764ba2;
-            transform: scale(1.03);
-        }
-
-        .footer {
-            background: #f5f6fa;
-            padding: 18px 40px;
-            text-align: center;
-            color: #636e72;
-            border-top: 1px solid #e4e7f5;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.9rem;
-            }
-
-            .header,
-            .content {
-                padding: 24px;
-            }
-        }
-    </style>
+    <title>El pingüino de Humboldt - Especie chilena en riesgo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Proyecto Diseño Web</h1>
-            <p>Especial sobre el pingüino de Humboldt y tutorial de posicionamiento CSS</p>
-        </header>
+    <header class="main-header">
+        <div class="header-container">
+            <p class="eyebrow">Biodiversidad chilena</p>
+            <h1 class="site-title">El pingüino de Humboldt: una especie chilena que lucha por sobrevivir</h1>
+            <p class="tagline">El pingüino de Humboldt enfrenta una situación crítica en Chile.</p>
+            <span class="header-accent" aria-hidden="true"></span>
+        </div>
+        <nav class="main-nav" aria-label="Secciones principales">
+            <ul class="nav-list">
+                <li><a href="#panorama" class="nav-link">Panorama</a></li>
+                <li><a href="#amenazas" class="nav-link">Amenazas</a></li>
+                <li><a href="#proteccion" class="nav-link">Protección</a></li>
+                <li><a href="#importancia" class="nav-link">Importancia</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main class="content">
-            <section class="projects-grid">
-                <article class="project-card">
-                    <h2>Especial Pingüino de Humboldt</h2>
-                    <p>Página editorial centrada en una especie chilena en riesgo, con cifras, amenazas, protección e importancia ecológica.</p>
-                    <ul>
-                        <li>Historia principal destacada</li>
-                        <li>Cifras y amenazas clave</li>
-                        <li>Diseño responsive</li>
-                        <li>Elementos con posicionamiento relative y absolute</li>
-                    </ul>
-                    <a href="noticias/" class="btn">Ver Proyecto</a>
-                </article>
+    <main class="main-content">
+        <section class="featured-story" id="panorama">
+            <article class="featured-article">
+                <div class="featured-image-container">
+                    <img src="assets/img/featured.jpg" alt="Pingüino de Humboldt sobre rocas costeras">
+                    <span class="category-badge">Conservación</span>
+                </div>
+                <div class="featured-content">
+                    <p class="story-kicker">Especie chilena en riesgo</p>
+                    <h2 class="featured-title">Chile concentra gran parte de las colonias reproductivas del pingüino de Humboldt y su conservación es clave para la supervivencia de la especie.</h2>
+                    <p class="featured-excerpt">La disminución de colonias, la pesca, la contaminación, el cambio climático y la pérdida de hábitat mantienen a esta ave marina en una situación crítica.</p>
+                    <time class="publish-date" datetime="2026-04-29">29 de abril de 2026</time>
+                </div>
+            </article>
+        </section>
 
-                <article class="project-card">
-                    <h2>Posicionamiento</h2>
-                    <p>Tutorial interactivo que demuestra posicionamientos CSS con ejemplos visuales claros y un caso práctico aplicado.</p>
-                    <ul>
-                        <li>Demostración de relative</li>
-                        <li>Demostración de absolute</li>
-                        <li>Comparativa visual</li>
-                        <li>Caso práctico de interfaz</li>
-                    </ul>
-                    <a href="posicionamiento/" class="btn">Ver Proyecto</a>
-                </article>
-            </section>
-        </main>
+        <section class="stats-strip" aria-label="Cifras clave">
+            <article class="stat-card">
+                <span class="stat-value">89%</span>
+                <p class="stat-label">de las colonias mundiales están en Chile, según CONAF.</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-value">2.500</span>
+                <p class="stat-label">parejas reproductivas como máximo estimado en el plan oficial.</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-value">2024</span>
+                <p class="stat-label">año en que se oficializó el Plan RECOGE del pingüino de Humboldt.</p>
+            </article>
+        </section>
 
-        <footer class="footer">
-            <p>Proyecto listo para revisar y volver a publicar</p>
-        </footer>
-    </div>
+        <section class="news-grid" id="amenazas">
+            <h2 class="section-title">Amenazas y contexto actual</h2>
+
+            <article class="news-card">
+                <div class="card-image-container">
+                    <img src="assets/img/news1.jpg" alt="Costa rocosa afectada por actividad humana">
+                    <span class="breaking-badge">Alerta</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Pérdida de hábitat y zonas de nidificación</h3>
+                    <p class="card-excerpt">La destrucción de espacios de reproducción y la intervención humana reducen la estabilidad de sus principales colonias en la costa chilena.</p>
+                    <footer class="card-meta">
+                        <span class="author-info">Hábitat costero</span>
+                        <span class="read-time">Impacto directo</span>
+                    </footer>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-image-container">
+                    <img src="assets/img/news2.jpg" alt="Redes de pesca en el mar">
+                    <span class="category-label">Pesca</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Competencia por alimento y captura incidental</h3>
+                    <p class="card-excerpt">La competencia con la pesca por alimento y la captura incidental en redes aumentan la presión sobre una población ya reducida.</p>
+                    <footer class="card-meta">
+                        <span class="author-info">Presión humana</span>
+                        <span class="read-time">Riesgo constante</span>
+                    </footer>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-image-container">
+                    <img src="assets/img/news3.jpg" alt="Mar con residuos y aves costeras">
+                    <span class="category-label">Clima</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Contaminación, especies invasoras e influenza aviar</h3>
+                    <p class="card-excerpt">La contaminación marina, los efectos del cambio climático, las especies invasoras y la influenza aviar agravan una población ya debilitada.</p>
+                    <footer class="card-meta">
+                        <span class="author-info">Amenazas múltiples</span>
+                        <span class="read-time">Alta vulnerabilidad</span>
+                    </footer>
+                </div>
+            </article>
+
+            <article class="news-card" id="proteccion">
+                <div class="card-image-container">
+                    <img src="assets/img/news4.jpg" alt="Zona natural protegida del litoral chileno">
+                    <span class="category-label">Protección</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Monumento Natural y demanda por medidas efectivas</h3>
+                    <p class="card-excerpt">En marzo de 2026 se acordó declararlo Monumento Natural de especie. La medida recibió cerca de 9.000 observaciones ciudadanas, mientras organizaciones ambientales exigen una protección más rápida y efectiva.</p>
+                    <footer class="card-meta">
+                        <span class="author-info">Gestión pública</span>
+                        <span class="read-time">Debate abierto</span>
+                    </footer>
+                </div>
+            </article>
+        </section>
+
+        <section class="analysis-section" id="importancia">
+            <div class="analysis-card">
+                <h2 class="analysis-title">¿Por qué es importante?</h2>
+                <p>El pingüino de Humboldt no solo es una especie carismática: también cumple un rol dentro del equilibrio de los ecosistemas marinos. Su presencia indica la salud de las costas, de las zonas de alimentación y de los sitios de reproducción.</p>
+                <p>Si sus poblaciones disminuyen, también se evidencian problemas mayores en el ecosistema marino, como sobrepesca, contaminación o alteraciones climáticas. Protegerlo implica resguardar una red ecológica más amplia.</p>
+            </div>
+
+            <aside class="analysis-card emphasis-card">
+                <span class="emphasis-label">Dato clave</span>
+                <p class="emphasis-text">Greenpeace advirtió que hoy quedarían menos de 2.000 parejas reproductivas en Chile, lo que refuerza la urgencia de tomar medidas de conservación.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Conservación del pingüino de Humboldt</p>
+            <p>Contenido informativo sobre biodiversidad y protección ambiental en Chile</p>
+        </div>
+    </footer>
 </body>
 </html>
