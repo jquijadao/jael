@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Diseño Web - Índice Maestro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+            max-width: 920px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 56px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .header p {
+            font-size: 1.05rem;
+            opacity: 0.92;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 30px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-card h2 {
+            color: #4c63d8;
+            margin-bottom: 14px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #56616f;
+            margin-bottom: 18px;
+            line-height: 1.65;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+            color: #56616f;
+        }
+
+        .project-card li {
+            margin: 8px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: scale(1.03);
+        }
+
+        .footer {
+            background: #f5f6fa;
+            padding: 18px 40px;
+            text-align: center;
+            color: #636e72;
+            border-top: 1px solid #e4e7f5;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.9rem;
+            }
+
+            .header,
+            .content {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Proyecto Diseño Web</h1>
+            <p>Especial sobre el pingüino de Humboldt y tutorial de posicionamiento CSS</p>
+        </header>
+
+        <main class="content">
+            <section class="projects-grid">
+                <article class="project-card">
+                    <h2>Especial Pingüino de Humboldt</h2>
+                    <p>Página editorial centrada en una especie chilena en riesgo, con cifras, amenazas, protección e importancia ecológica.</p>
+                    <ul>
+                        <li>Historia principal destacada</li>
+                        <li>Cifras y amenazas clave</li>
+                        <li>Diseño responsive</li>
+                        <li>Elementos con posicionamiento relative y absolute</li>
+                    </ul>
+                    <a href="noticias/" class="btn">Ver Proyecto</a>
+                </article>
+
+                <article class="project-card">
+                    <h2>Posicionamiento</h2>
+                    <p>Tutorial interactivo que demuestra posicionamientos CSS con ejemplos visuales claros y un caso práctico aplicado.</p>
+                    <ul>
+                        <li>Demostración de relative</li>
+                        <li>Demostración de absolute</li>
+                        <li>Comparativa visual</li>
+                        <li>Caso práctico de interfaz</li>
+                    </ul>
+                    <a href="posicionamiento/" class="btn">Ver Proyecto</a>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Proyecto listo para revisar y volver a publicar</p>
+        </footer>
+    </div>
+</body>
+</html>

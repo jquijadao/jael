@@ -1,0 +1,558 @@
+/* =====================================================
+   VARIABLES Y RESET GLOBAL
+   ===================================================== */
+
+:root {
+    --primary-color: #6c5ce7;      /* Púrpura moderno */
+    --secondary-color: #00b894;    /* Verde menta */
+    --accent-color: #fdcb6e;       /* Amarillo dorado */
+    --danger-color: #e17055;       /* Coral rojo */
+    --background: #f5f6fa;         /* Gris claro */
+    --dark-bg: #2d3436;            /* Negro */
+    --text-primary: #2d3436;       /* Texto oscuro */
+    --text-light: #636e72;         /* Texto gris */
+    --text-white: #ffffff;         /* Blanco */
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background);
+}
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-white);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 50px;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+   ===================================================== */
+
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+}
+
+/* =====================================================
+   SECCIONES DE DEMOSTRACIÓN
+   ===================================================== */
+
+.demo-section {
+    margin-bottom: 60px;
+    background: var(--text-white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 15px;
+}
+
+.section-description {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    background-color: var(--background);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* =====================================================
+   CONTENEDORES DE EJEMPLO
+   ===================================================== */
+
+.example-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.parent-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    min-height: 300px;
+}
+
+.box-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   POSICIONAMIENTO RELATIVE - EJEMPLO
+   ===================================================== */
+
+/* Contenedor RELATIVE - contexto de posicionamiento */
+.relative-parent {
+    position: relative;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* Elemento hijo con posicionamiento RELATIVE */
+.relative-child {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background: var(--secondary-color);
+    color: var(--text-white);
+    padding: 20px;
+    border-radius: 8px;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.child-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.child-description {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Elemento hermano */
+.sibling-box {
+    background: var(--text-white);
+    color: var(--primary-color);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: 500;
+    border-left: 4px solid var(--accent-color);
+}
+
+.sibling-label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   POSICIONAMIENTO ABSOLUTE - EJEMPLO
+   ===================================================== */
+
+/* Contenedor RELATIVE que actúa como contexto */
+.absolute-parent {
+    position: relative;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    min-height: 400px;
+    margin: 20px 0;
+}
+
+/* Elementos ABSOLUTE en las esquinas */
+.absolute-child {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.absolute-child:hover {
+    transform: scale(1.1);
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    background: var(--primary-color);
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+    background: var(--secondary-color);
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    background: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    background: var(--danger-color);
+}
+
+.position-label {
+    line-height: 1.4;
+}
+
+.normal-content {
+    padding: 20px;
+    background: var(--text-white);
+    margin: 20px;
+    border-radius: 6px;
+    color: var(--text-light);
+}
+
+/* =====================================================
+   BLOQUE DE CÓDIGO
+   ===================================================== */
+
+.code-block {
+    background: var(--dark-bg);
+    color: #00ff00;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+.code-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.code-block pre {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.code-block code {
+    color: #00ff00;
+}
+
+/* =====================================================
+   CASO PRÁCTICO - TARJETA DE PRODUCTO
+   ===================================================== */
+
+.product-card {
+    background: var(--text-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    max-width: 350px;
+    margin: 20px auto;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de imagen con RELATIVE */
+.product-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge de descuento con ABSOLUTE */
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--danger-color);
+    color: var(--text-white);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.discount-percent {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Badge "NUEVO" con ABSOLUTE */
+.new-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--secondary-color);
+    color: var(--text-white);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Contenedor de precio con RELATIVE */
+.price-container {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Etiqueta de oferta con ABSOLUTE */
+.sale-label {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+/* =====================================================
+   COMPARATIVA VISUAL
+   ===================================================== */
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.comparison-item {
+    background: linear-gradient(135deg, var(--background) 0%, var(--text-white) 100%);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-item h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    color: var(--text-light);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.feature-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+
+.main-footer {
+    background: var(--dark-bg);
+    color: var(--text-white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    opacity: 0.9;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .example-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .demo-section {
+        padding: 20px;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 40px 15px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+
+    .demo-section {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .absolute-child {
+        width: 100px;
+        height: 100px;
+        font-size: 0.7rem;
+    }
+
+    .absolute-parent {
+        min-height: 300px;
+    }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento CSS - Demostración Interactiva</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">Posicionamiento CSS</h1>
+        <p class="header-subtitle">Ejemplos de Relative y Absolute</p>
+    </header>
+
+    <main class="main-content">
+        <!-- SECCIÓN 1: POSICIONAMIENTO RELATIVE -->
+        <section class="demo-section">
+            <h2 class="section-title">1. Posicionamiento RELATIVE</h2>
+            <p class="section-description">
+                Un elemento con posicionamiento relativo se desplaza respecto a su posición normal,
+                pero sigue ocupando su espacio original en el flujo del documento.
+            </p>
+
+            <div class="example-container">
+                <!-- Contenedor con posicionamiento RELATIVE -->
+                <div class="parent-box relative-parent">
+                    <p class="box-label">Contenedor RELATIVE (padre)</p>
+                    
+                    <!-- Elemento hijo dentro de contenedor RELATIVE -->
+                    <div class="child-box relative-child">
+                        <span class="child-label">Elemento RELATIVE</span>
+                        <p class="child-description">Desplazado 20px arriba y 30px a la derecha</p>
+                    </div>
+
+                    <!-- Segundo elemento para demostrar flujo -->
+                    <div class="sibling-box">
+                        <span class="sibling-label">Elemento Hermano</span>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <p class="code-title">Código CSS:</p>
+                    <pre><code>.relative-child {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: POSICIONAMIENTO ABSOLUTE -->
+        <section class="demo-section">
+            <h2 class="section-title">2. Posicionamiento ABSOLUTE</h2>
+            <p class="section-description">
+                Un elemento con posicionamiento absoluto se sale del flujo normal y se posiciona
+                respecto a su contenedor RELATIVE más cercano.
+            </p>
+
+            <div class="example-container">
+                <!-- Contenedor con posicionamiento RELATIVE (contexto de posicionamiento) -->
+                <div class="parent-box absolute-parent">
+                    <p class="box-label">Contenedor RELATIVE (contenedor posicionado)</p>
+                    
+                    <!-- Elemento ABSOLUTE posicionado dentro del RELATIVE -->
+                    <div class="child-box absolute-child top-left">
+                        <span class="position-label">ABSOLUTE<br>top: 10px | left: 10px</span>
+                    </div>
+
+                    <!-- Otro elemento ABSOLUTE -->
+                    <div class="child-box absolute-child top-right">
+                        <span class="position-label">ABSOLUTE<br>top: 10px | right: 10px</span>
+                    </div>
+
+                    <!-- Otro elemento ABSOLUTE -->
+                    <div class="child-box absolute-child bottom-left">
+                        <span class="position-label">ABSOLUTE<br>bottom: 10px | left: 10px</span>
+                    </div>
+
+                    <!-- Otro elemento ABSOLUTE -->
+                    <div class="child-box absolute-child bottom-right">
+                        <span class="position-label">ABSOLUTE<br>bottom: 10px | right: 10px</span>
+                    </div>
+
+                    <!-- Contenido normal dentro del contenedor -->
+                    <div class="normal-content">
+                        <p>Este contenido fluye normalmente dentro del contenedor.</p>
+                        <p>Los elementos ABSOLUTE no lo afectan.</p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <p class="code-title">Código CSS:</p>
+                    <pre><code>.absolute-parent {
+  position: relative;
+}
+
+.absolute-child {
+  position: absolute;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CASO PRÁCTICO - TARJETA CON ELEMENTOS POSICIONADOS -->
+        <section class="demo-section">
+            <h2 class="section-title">3. Caso Práctico: Tarjeta de Producto</h2>
+            <p class="section-description">
+                Ejemplo real de cómo combinar relative y absolute para crear una tarjeta
+                profesional con badge de oferta y botón flotante.
+            </p>
+
+            <div class="product-card">
+                <!-- Contenedor RELATIVE para el producto -->
+                <div class="product-image-container">
+                    <img src="assets/img/product-placeholder.jpg" alt="Producto" class="product-image">
+                    
+                    <!-- Badge de descuento - ABSOLUTE posicionado en la esquina -->
+                    <div class="discount-badge">
+                        <span class="discount-percent">-30%</span>
+                    </div>
+
+                    <!-- Etiqueta "Nuevo" - ABSOLUTE posicionado -->
+                    <span class="new-badge">NUEVO</span>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="product-name">Producto Premium</h3>
+                    <p class="product-description">Descripción del producto con características destacadas.</p>
+                    
+                    <!-- Contenedor de precio con posicionamiento RELATIVE -->
+                    <div class="price-container">
+                        <span class="original-price">$99.99</span>
+                        <span class="current-price">$69.99</span>
+                        <!-- Etiqueta de oferta - ABSOLUTE -->
+                        <span class="sale-label">En oferta</span>
+                    </div>
+
+                    <button class="add-to-cart-btn">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: COMPARATIVA VISUAL -->
+        <section class="demo-section">
+            <h2 class="section-title">4. Comparativa: Relative vs Absolute</h2>
+            
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h3>POSICIONAMIENTO RELATIVE</h3>
+                    <ul class="feature-list">
+                        <li>✓ Mantiene su espacio en el flujo</li>
+                        <li>✓ Se desplaza desde su posición original</li>
+                        <li>✓ Afecta a otros elementos</li>
+                        <li>✓ Usa top, bottom, left, right</li>
+                        <li>✓ Útil para ajustes menores</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item">
+                    <h3>POSICIONAMIENTO ABSOLUTE</h3>
+                    <ul class="feature-list">
+                        <li>✓ Sale del flujo del documento</li>
+                        <li>✓ Se posiciona respecto a su contexto</li>
+                        <li>✓ No afecta a otros elementos</li>
+                        <li>✓ Usa top, bottom, left, right</li>
+                        <li>✓ Ideal para overlays y badges</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Posicionamiento CSS - Tutorial Educativo</p>
+    </footer>
+</body>
+</html>
